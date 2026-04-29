@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livingscape Contact</title>
+  <script>
+    if (sessionStorage.getItem("livingscape-logo-transition")) {
+      document.documentElement.classList.add("logo-transition-pending");
+    }
+  </script>
+  <style>
+    html.logo-transition-pending [data-logo-transition-target] {
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="services-page" data-logo-transition-page="contact">
+  <div class="page-shell">
+    <div class="site-badge">Based in the KWC area</div>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="../icons/livingscapetitle.png" alt="Livingscape">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero services-hero" aria-label="Contact">
+      <div class="services-scroll">
+        <img class="hero-logo services-hero-logo" src="../icons/livingscape.png" alt="Livingscape logo" data-logo-transition-target>
+        <section class="services-report" aria-label="Contact content">
+          <p class="services-kicker">Contact</p>
+          <h1 class="services-title">Let's create a landscape worth arriving home to.</h1>
+          <p class="services-summary">
+            Reach out to start a project, request a refresh, or ask about ongoing care.
+          </p>
+          <div class="services-grid">
+            <article class="service-card">
+              <h2>Email</h2>
+              <p>
+                livingscapedesign@outlook.com
+                <br>
+                We typically respond within 1 to 2 business days.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h2>Phone</h2>
+              <p>
+                (289) 685-0527
+                <br>
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h2>Service Area</h2>
+              <p>
+                Kitchener/Waterloo/Cambridge ON, Canada
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h2>What to Send</h2>
+              <p>
+                A few photos of the space, your general location, and a short note about
+                the kind of look or maintenance level you're hoping for.
+              </p>
+            </article>
+          </div>
+
+          <form class="contact-form" action="mailto:livingscapedesign@outlook.com" method="post" enctype="text/plain">
+            <p class="contact-form-intro">Contacts us below with your inquiries</p>
+            <div class="contact-form-row">
+              <label>
+                <span>Your name</span>
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                <span>Your email</span>
+                <input type="email" name="email" placeholder="livingscapedesign@outlook.com">
+              </label>
+            </div>
+
+            <label>
+              <span>Project details</span>
+              <textarea name="message" rows="5" placeholder="Tell us about your project, timeline, and location."></textarea>
+            </label>
+
+            <button class="primary-button services-cta" type="submit">Send email</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="logo-transition.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livingscape Projects</title>
+  <script>
+    if (sessionStorage.getItem("livingscape-logo-transition")) {
+      document.documentElement.classList.add("logo-transition-pending");
+    }
+  </script>
+  <style>
+    html.logo-transition-pending [data-logo-transition-target] {
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="projects-page" data-logo-transition-page="projects">
+  <div class="page-shell">
+    <div class="site-badge">Based in the KWC area</div>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="../icons/livingscapetitle.png" alt="Livingscape">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero projects-hero" aria-label="Projects">
+      <div class="projects-scroll">
+        <img class="hero-logo projects-hero-logo" src="../icons/livingscape.png" alt="Livingscape logo" data-logo-transition-target>
+
+        <section class="projects-report" aria-label="Projects content">
+          <p class="projects-kicker">Project Gallery</p>
+          <h1 class="projects-title">See the outdoor spaces we've brought to life.</h1>
+          <p class="projects-summary">
+            A curated look at finished landscapes, entry refreshes, planting plans, and
+            clean hard-softscape combinations.
+          </p>
+
+          <section class="projects-simple-gallery" aria-label="Project selector">
+            <div class="projects-simple-left">
+              <div class="projects-simple-list" id="project-list">
+                <button class="projects-simple-entry is-active" type="button" data-title="Interlock Cleaning">
+                    <img src="../customer-photos/interlockclean_2.JPEG" alt="Interlock Cleaning preview">
+                  <span>Interlock Cleaning</span>
+                </button>
+                <button class="projects-simple-entry" type="button" data-title="Garden Atmosphere">
+                  <img src="../housebackdrop.jpg" alt="Garden Atmosphere preview">
+                  <span>Garden Atmosphere</span>
+                </button>
+                <button class="projects-simple-entry" type="button" data-title="Signature Detail">
+                  <img src="../housebackdrop.jpg" alt="Signature Detail preview">
+                  <span>Signature Detail</span>
+                </button>
+                <button class="projects-simple-entry" type="button" data-title="Presentation Mark">
+                  <img src="../housebackdrop.jpg" alt="Presentation Mark preview">
+                  <span>Presentation Mark</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="projects-simple-right">
+              <div class="projects-simple-detail">
+                <div class="projects-simple-carousel">
+                  <button class="projects-carousel-nav projects-carousel-prev" type="button" aria-label="Previous photo">
+                    <span aria-hidden="true">&#8592;</span>
+                  </button>
+
+                  <div class="projects-simple-carousel-stage">
+                <img id="project-preview" src="../customer-photos/interlockclean_2.JPEG" alt="Interlock Cleaning preview">
+                  </div>
+
+                  <button class="projects-carousel-nav projects-carousel-next" type="button" aria-label="Next photo">
+                    <span aria-hidden="true">&#8594;</span>
+                  </button>
+                </div>
+                <div class="projects-simple-dots" id="project-dots" aria-label="Photo navigation"></div>
+                <div class="projects-simple-detail-text">
+                  <h2 id="project-title">Interlock Cleaning</h2>
+                  <p id="project-copy">Customer requested that the weeds, grass and dirt between their interlocking be removed.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <a class="primary-button projects-cta" href="contact.html">Book now</a>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="logo-transition.js"></script>
+  <script src="projects-gallery.js"></script>
+</body>
+</html>
