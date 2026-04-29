@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livingscape</title>
+  <script>
+    if (sessionStorage.getItem("livingscape-logo-transition")) {
+      document.documentElement.classList.add("logo-transition-pending");
+    }
+  </script>
+  <style>
+    html.logo-transition-pending [data-logo-transition-target] {
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body data-logo-transition-page="home">
+  <div class="page-shell">
+    <div class="site-badge">Based in the KWC area</div>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="../icons/livingscapetitle.png" alt="Livingscape">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero" aria-label="Hero">
+      <img class="hero-logo home-hero-logo" src="../icons/livingscape.png" alt="Livingscape logo" data-logo-transition-target>
+
+      <h1 class="home-hero-text">
+        Quality softscaping that will make your jaw drop.
+      </h1>
+
+      <a class="primary-button home-hero-btn" href="contact.html">
+        Book now
+      </a>
+    </main>
+  </div>
+  <script src="logo-transition.js"></script>
+</body>
+</html>
