@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livingscape Services</title>
+  <script>
+    if (sessionStorage.getItem("livingscape-logo-transition")) {
+      document.documentElement.classList.add("logo-transition-pending");
+    }
+  </script>
+  <style>
+    html.logo-transition-pending [data-logo-transition-target] {
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="services-page" data-logo-transition-page="services">
+  <div class="page-shell">
+    <div class="site-badge">Based in the KWC area</div>
+    <header class="site-header">
+      <a class="brand" href="../index.html">
+        <img class="brand-mark" src="../icons/livingscapetitle.png" alt="Livingscape">
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html">Home</a>
+        <a class="active" href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero services-hero" aria-label="Services">
+      <div class="services-scroll">
+        <img class="hero-logo services-hero-logo" src="../icons/livingscape.png" alt="Livingscape logo" data-logo-transition-target>
+
+        <section class="services-report" aria-label="Services report">
+          <p class="services-kicker">Service Overview</p>
+          <h1 class="services-title">Softscaping and installs with lasting impact.</h1>
+          <p class="services-summary">
+            Livingscape builds refined outdoor environments with clean plant design,
+            balanced structure, and low-maintenance planning for long-term curb appeal.
+          </p>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <h2>Softscape Design</h2>
+              <p>
+                Layered planting plans, bed shaping, seasonal color placement, and
+                plant palettes selected to complement your home's architecture.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h2>Landscape Installation</h2>
+              <p>
+                Clean installation of shrubs, ornamental grasses, perennials, mulch,
+                edging, and front-entry features with a polished final finish.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h2>Property Enhancements</h2>
+              <p>
+                Targeted refreshes including entry upgrades, bed rebuilds, privacy
+                planting, screening, and foundation landscape improvements.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h2>Seasonal Maintenance</h2>
+              <p>
+                Ongoing pruning, shaping, cleanup, mulch refreshes, and planting care
+                to keep landscapes crisp, healthy, and photo-ready year-round.
+              </p>
+            </article>
+          </div>
+
+          <a class="primary-button services-cta" href="contact.html">Book now</a>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="logo-transition.js"></script>
+</body>
+</html>
